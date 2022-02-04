@@ -44,10 +44,10 @@
       </header>
 
 
-      <main class="main-inner main-container">
+      <main class="main-inner inner-container">
         <div class="sorting-container">
-         <img class="background-cat" alt="Фон из гор" src="/images/background-catalogue.jpg" width="1200" height="408">
-          <h1 class="catalogue-header-title">Гостиницы Седоны</h1>
+         <img class="background-cat" alt="Фон из гор" src="/images/background-catalogue.jpg">
+          <h1 class="catalog-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -57,7 +57,9 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
-        <section class="catalog-hotels">
+
+          <section class="catalog-hotels">
+            <div class="hotel-filter">
           <h2 class="visually-hidden">Список гостиниц</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
@@ -103,6 +105,7 @@
             <button class="button" type="submit">Применить</button>
             <button class="button" type="submit">Сбросить</button>
           </form>
+        </div>
       </section>
 </div>
 
@@ -210,7 +213,7 @@
             <option value="fifteen">15</option>
           </select>
         </section>
-      </div>
+
       </main>
 
       <section class="subscribe">
@@ -220,7 +223,7 @@
         <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
         <button class="button" type="submit">Подписаться</button>
       </section>
-
+    </div>
 
       <footer class="page-footer">
         <div class="page-footer-container"></div>

@@ -4,8 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
@@ -42,10 +44,10 @@
       </header>
 
 
-      <main class="main-catalogue">
-        <img class="background" alt="Фон из гор" src="images/background-catalogue.jpg" width="1200" height="408">
-        <header class="catalogue-header">
-          <h1 class="catalogue-header-title">Гостиницы Седоны</h1>
+      <main class="main-inner inner-container">
+        <div class="sorting-container">
+         <img class="background-cat" alt="Фон из гор" src="/images/background-catalogue.jpg">
+          <h1 class="catalog-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -55,9 +57,9 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
-        </header>
 
-        <section class="catalog-hotels">
+          <section class="catalog-hotels">
+            <div class="hotel-filter">
           <h2 class="visually-hidden">Список гостиниц</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
@@ -103,9 +105,12 @@
             <button class="button" type="submit">Применить</button>
             <button class="button" type="submit">Сбросить</button>
           </form>
+        </div>
+      </section>
+</div>
 
+     <div class="hotel-search">
       <span class="hotel-total">Найдено гостиниц: 38</span>
-
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала популярное</option>
             <option value="cheap">Сначала дешёвое</option>
@@ -116,15 +121,21 @@
             <span class="visually-hidden">Показать плиткой</span>
             <img src="images/mode-tile.svg" width="16" height="14" alt="Плитка">
           </a>
+
           <a class="button" href="#">
             <span class="visually-hidden">Показать с описанием</span>
             <img src="images/mode-slideshow.svg" width="16" height="14" alt="Описание">
           </a>
+
           <a class="button" href="#">
             <span class="visually-hidden">Показать список</span>
             <img src="images/mode-list.svg" width="16" height="14" alt="Список">
           </a>
+        </div>
 
+
+
+        <div class="hotels">
           <ul class="hotel-list">
             <li class="hotel-card">
               <img class="hotel-card-image" src="images/hotel-1.jpg" alt="Amara Resort & Spa" width="299" height="206">
@@ -132,7 +143,7 @@
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 4000 ₽</span>
             <a class="hotel-card-detail" href="#">Подробнее</a>
-            <a class="hotel-card-button button" href="#">В избранное</a>
+            <a class="hotel-card-button" href="#">В избранное</a>
             <img src="images/star.svg" class="rating-star" alt="Звездочка" width="18" height="17">
             <span class="hotel-card-rating">РЕЙТИНГ: 8,5</span>
           </li>
@@ -143,7 +154,7 @@
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 3000 ₽</span>
           <a class="hotel-card-detail" href="#">Подробнее</a>
-          <a class="hotel-card-button button" href="#">В избранное</a>
+          <a class="hotel-card-button" href="#">В избранное</a>
           <img src="images/star.svg" class="rating-star" alt="Звездочка" width="18" height="17">
           <span class="hotel-card-rating">РЕЙТИНГ: 8,9</span>
         </li>
@@ -153,7 +164,7 @@
         <span class="hotel-card-type">Гостиница</span>
         <span class="hotel-card-price">От 2000 ₽</span>
         <a class="hotel-card-detail" href="#">Подробнее</a>
-        <a class="hotel-card-button button" href="#">В избранное</a>
+        <a class="hotel-card-button" href="#">В избранное</a>
         <img src="images/star.svg" class="rating-star" alt="Звездочка" width="18" height="17">
         <span class="hotel-card-rating">РЕЙТИНГ: 9,2</span>
       </li>
@@ -163,12 +174,13 @@
       <span class="hotel-card-type">Гостиница</span>
       <span class="hotel-card-price">От 3 000 ₽</span>
       <a class="hotel-card-detail" href="#">Подробнее</a>
-      <a class="hotel-card-button button" href="#">В избранное</a>
+      <a class="hotel-card-button" href="#">В избранное</a>
       <img src="images/star.svg" class="rating-star" alt="Звездочка" width="18" height="17">
       <span class="hotel-card-rating">РЕЙТИНГ: 9,2</span>
       </li>
           </ul>
-          <button class="button pagination-show-more" type="button">Показать ещё</button>
+        </div>
+          <button class="button pagination-show-more" type="button">Загрузить ещё</button>
 
           <ul class="pagination">
             <li class="pagination-item">
@@ -211,33 +223,36 @@
         <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
         <button class="button" type="submit">Подписаться</button>
       </section>
-
+    </div>
 
       <footer class="page-footer">
+        <div class="page-footer-container"></div>
         <section class="footer-social">
           <ul class="footer-social-list">
               <li class="footer-social-item">
-                <a class="button" href="#">
+                <a class="button social" href="#">
                   <span class="visually-hidden">Твиттер</span>
                   <img src="images/twitter.svg" alt="Твиттер" width="17" height="14.96" class="social-icon">
                 </a>
               </li>
               <li class="footer-social-item">
-                <a class="button" href="#">
+                <a class="button social" href="#">
                   <span class="visually-hidden">Фейсбук</span>
                   <img src="images/facebook.svg" alt="Фейсбук" width="10" height="18" class="social-icon">
                 </a>
               </li>
               <li class="footer-social-item">
-                <a class="button" href="#">
+                <a class="button social" href="#">
                   <span class="visually-hidden">Ютуб</span>
                   <img src="images/youtube.svg" alt="Ютуб" width="20.1" height="16" class="social-icon">
                 </a>
               </li>
             </ul>
-            <a class="footer-contacts-address-phone" href="tel:+78005558628">+7 (812) 812-12-12</a>
+            <a class="address-phone" href="tel:+78005558628">+7 (812) 812-12-12</a>
           <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
         </section>
+        <div class="page-footer-container"></div>
       </footer>
+
   </body>
 </html>
